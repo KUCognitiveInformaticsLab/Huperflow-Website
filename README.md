@@ -77,7 +77,7 @@ HuPerFlow is a benchmark for human-perceived optical flow in natural scenes. As 
   booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year      = {2025},
   note      = {In press}
-}
+  }
 
     
   ```
