@@ -62,7 +62,7 @@ HuPerFlow is a benchmark for human-perceived optical flow in natural scenes. As 
   4. **VIPER:** [https://playing-for-benchmarks.org/dataset_viper.html](https://playing-for-benchmarks.org/dataset_viper.html)  
   5. **Spring:** [https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html](https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html)  
   6. **Monkaa:** [https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html](https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html)  
-  7. **MHOF:** *Refer to the official documentation for licensing details.*  
+  7. **MHOF:** [https://humanflow.is.tue.mpg.de/](https://humanflow.is.tue.mpg.de/) 
   8. **Driving:** [https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html](https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html)  
   9. **FlyingThings3D:** [https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html](https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html)  
   10. **TartanAir:** [https://theairlab.org/tartanair-dataset/](https://theairlab.org/tartanair-dataset/)
@@ -89,6 +89,6 @@ The HuPerFlow dataset, along with the corresponding human-perceived response vec
 
 ## Acknowledgements
 
-We extend our thanks to the 480 participants who contributed their responses, as well as to the developers and maintainers of the ten benchmark optical flow datasets. Their contributions have been invaluable to the development of HuPerFlow.
+We extend our thanks to the 480 participants instance who contributed their responses, as well as to the developers and maintainers of the ten benchmark optical flow datasets. Their contributions have been invaluable to the development of HuPerFlow.
 
 
