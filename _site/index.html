@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="description"
+        content="HuPerFlow: A Comprehensive Benchmark for Human vs. Machine Motion Estimation.">
+
+  <meta name="keywords" content="Optical flow, Motion Estimation, Human Perception, Motion Dataset, Visual Psychophysics">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Web title -->
+  <title>HuPerFlow</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <!-- 加载Google字体，可根据需要修改 -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <!-- 加载CSS样式文件 -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- 页面图标 -->
+  <link rel="icon" href="./static/images/eye.svg">
+
+  <!-- 加载jQuery和其他JS库 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <!-- 菜单按钮 -->
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+
+      <a class="navbar-item" href="xxxx">
+        <span class="icon">
+          <i class="fas fa-home"></i>
+        </span>
+      </a>
+
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">More Research </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://www.cell.com/iscience/fulltext/S2589-0042(23)02384-2">Human optical flow</a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2305.09156">Motion Model</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+  
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+        
+          <h1 class="title is-1 publication-title colorful-title">Huperflow: A Comprehensive Benchmark for Human vs. Machine Motion Estimation Comparison</h1>
+          <div class="is-size-5 publication-authors">
+        
+            <span class="author-block">
+               <a href="https://scholar.google.com/citations?user=lcYpJsYAAAAJ&hl=en"> Yung-hao Yang </a><sup>1</sup>,
+              <a href="https://scholar.google.com/citations?user=GdLTUlgAAAAJ&hl=en"> Zitang Sun </a><sup>1</sup>,
+              Taiki Fukiage</a><sup>2</sup>,
+               <a href="https://scholar.google.com/citations?user=bxhQU8EAAAAJ&hl=en"> Shin'ya Nishida* </a><sup>1,2</sup>
+             
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+        
+            <span class="author-block"><sup>1</sup>Cognitive Informatics Lab, Kyoto University, Japan.</span>
+            <span class="author-block"><sup>2</sup>Communication Science Laboratories, Nippon Telegraph and Telephone Corporation, Japan.</span>
+            
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- 论文链接，点击时弹出提示 -->
+              <span class="link-block">
+                <a href="/static/Yang_HuPerFlow_A_Comprehensive_Benchmark_for_Human_vs._Machine_Motion_Estimation_CVPR_2025_paper.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://cvpr.thecvf.com/virtual/2025/poster/35191" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-globe"></i></span>
+                  <span>CVPR</span>
+                </a>
+              </span>
+              <!-- 视频链接，点击时弹出提示 -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=Hl-OSRvbjZ4" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- 代码链接，点击时弹出提示 -->
+              <span class="link-block">
+                 <a href="https://github.com/KUCognitiveInformaticsLab/Huperflow-Website/tree/main/Code_onlineexp_session001_English" target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="external-link button is-normal is-rounded is-dark"
+                >
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+            
+<span class="link-block">
+  <a 
+    href="https://huggingface.co/datasets/sunana/Huperflow" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="external-link button is-normal is-rounded is-dark"
+  >
+    <span class="icon"><i class="far fa-images"></i></span>
+    <span>Data</span>
+  </a>
+</span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 标题居中对齐 */
+  .colorful-title {
+    text-align: center;
+    font-size: 2.5em; /* 根据需要调整字体大小 */
+  }
+
+  /* 为不同颜色定义类 */
+  .word-color-1 { color: #ff5733; }
+  .word-color-2 { color: #33c1ff; }
+  .word-color-3 { color: #9b33ff; }
+  .word-color-4 { color: #33ff57; }
+  .word-color-5 { color: #ffd433; }
+  .word-color-6 { color: #ff33a6; }
+</style>
+
+<script>
+  // JavaScript代码：将标题的每个单词分配随机颜色
+  document.addEventListener("DOMContentLoaded", function() {
+    const title = document.querySelector(".colorful-title");
+    const words = title.innerText.split(" ");
+    title.innerHTML = words.map((word, index) => {
+      const colorClass = `word-color-${(index % 6) + 1}`; // 分配颜色类
+      return `<span class="${colorClass}">${word}</span>`;
+    }).join(" ");
+  });
+</script>
+
+
+<!-- JavaScript，用于显示提示信息 -->
+<script>
+  function showAlert() {
+    alert("Comming Soon.");
+  }
+</script>
+
+<style>
+  .scaled-video {
+    width: 70vw; /* 占据视口宽度的 70% */
+    height: 70vh; /* 占据视口高度的 70% */
+    object-fit: contain; /* 保持视频内容完整，可能会有空白边 */
+    display: block; /* 使视频为块级元素，以便居中 */
+    margin: 0 auto; /* 水平居中对齐 */
+  }
+ .overlay-text {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 70%;
+    margin-top: -20px; /* 仅调整顶部间距 */
+    margin-left: auto;
+    margin-right: auto; /* 水平居中 */
+}
+</style>
+
+<hr class="section-divider">
+  <!-- Teaser 主视频展示 -->
+<section class="hero teaser">
+  <video id="teaser" autoplay muted loop playsinline class="scaled-video">
+    <source src="./static/5_Spring_AllOs.mp4" type="video/mp4">
+  </video>
+  <h2 class="subtitle has-text-centered overlay-text">
+     <span class="dnerf">HuPerFlow</span> collects and analyzes extensive human-perceived optical flow data across multiple established optical flow benchmarks. The video above demonstrates examples from the <a href="https://spring-benchmark.org/">Spring Benchmark</a>. In many cases, human perception of motion (shown by red arrows) differs from the ground truth (blue arrows), with the discrepancy represented by the endpoint error (size of the green circles).
+  </h2>
+</section>
+
+<hr class="section-divider">
+<!-- 轮播视频展示 -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- 描述文字 -->
+      <p class="has-text-centered is-size-5 mb-4">Swipe to browse more examples</p>
+
+      <div id="results-carousel" class="carousel results-carousel">
+        <!-- 每个视频项目 -->
+        <div class="item">
+          <video autoplay controls muted loop playsinline height="100%">
+            <source src="./static/1_KITTI_Session5_Mov1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop playsinline height="100%">
+            <source src="./static/2_VirtualKITTI2_Session4_Mov2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop playsinline height="100%">
+            <source src="./static/3_MPI_Sintel_NV_Session4_Mov1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop playsinline height="100%">
+            <source src="./static/4_VIPER_Session7_Mov2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop playsinline height="100%">
+            <source src="./static/5_Spring_Session12_Mov2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop playsinline height="100%">
+            <source src="./static/6_Monkaa_Session4_Mov1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop playsinline height="100%">
+            <source src="./static/7_MHOF_Session7_Mov2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop playsinline height="100%">
+            <source src="./static/8_Driving_Session12_Mov2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop playsinline height="100%">
+            <source src="./static/9_Flyingthings3D_Session9_Mov1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop playsinline height="100%">
+            <source src="./static/10_TartanAir_Session2_Mov2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 样式用于让描述文字居中并适应页面风格 */
+  .has-text-centered {
+    text-align: center;
+  }
+  .is-size-5 {
+    font-size: 1.25rem;
+  }
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+</style>
+
+
+<hr class="section-divider">
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            As AI models are increasingly integrated into applications involving human interaction, 
+            understanding the alignment between human perception and machine vision has become essential. 
+            One example is the estimation of visual motion (optical flow) in dynamic applications such as driving assistance.
+            While there are numerous optical flow datasets and benchmarks with ground truth information, human-perceived flow in natural scenes remains underexplored.
+            We introduce HuPerFlow—a benchmark for human-perceived flow measured at 2,400 locations selected from ten representative computer vision optical flow datasets. 
+            Through online psychophysical experiments, we collected ~38,400 response vectors from 480 participant instances. 
+            Our data demonstrate that human-perceived flow aligns with ground truth in spatiotemporally smooth locations while also showing systematic errors influenced by various environmental properties.
+            Additionally, we evaluated several optical flow algorithms against human-perceived flow, uncovering both similarities and unique aspects of human perception in complex natural scenes.
+            HuPerFlow is the first large-scale human-perceived flow benchmark for alignment between computer vision models and human perception, 
+            as well as for scientific exploration of human motion perception in natural scenes. The HuPerFlow benchmark will be available online upon acceptance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<hr class="section-divider">
+<!-- Teaser 主视频展示 -->
+<section class="hero teaser">
+  <video id="teaser" autoplay muted loop playsinline class="scaled-video">
+    <source src="./static/3_MPI_Sintel_NV_AllCV.mp4" type="video/mp4">
+     Your browser does not support the video tag.
+  </video>
+
+  <video id="teaser" autoplay muted loop playsinline class="scaled-video">
+    <source src="./static/4_VIPER_AllCV.mp4" type="video/mp4">
+     Your browser does not support the video tag.
+  </video>
+  
+  <h2 class="subtitle has-text-centered overlay-text">
+    Several representative computer vision models and human-inspired models for motion estimation were tested on our human benchmark. 
+    Here, we select the <a href="https://playing-for-benchmarks.org/download/">VIPER Benchmark</a>  and  <a href="http://sintel.is.tue.mpg.de/">MPI-Sintel Benchmark</a> as demonstrations.
+    The red, yellow, and blue arrows represent human perception, computer vision (CV) models, and ground truth (GT), respectively. We introduce the Relative Consistency Index (RCI) to illustrate each model's ability to align with human perception (i.e., human bias that differs from GT). The yellow circle denotes this alignment; a larger circle indicates that the CV model's response is closer to human perception than to GT. Overall, we found that basic human-aligned computations, such as models based on motion energy calculations, capture human illusions of motion more effectively than state-of-the-art CV models.
+  </h2>
+</section>
+
+
+<hr class="section-divider">
+  <!-- Experiment Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Online Psychophysical Experiment</h2>
+        <div class="content has-text-justified">
+          <p>
+            Measuring reliable human perception of motion in natural scenes is extremely challenging. Inspired by classical psychophysical methods, we have developed an online experiment to collect human-perceived optical flow at specific spatial locations and time points. 
+            This online paradigm includes a calibration process that ensures the user's viewing angle. Display resolution and frame rate are appropriately adjusted for accurate data collection across devices.
+          </p>
+          <p>
+            To maximize reliability, each participant receives thorough training with guided instructions, and we filter out inconsistent participants to ensure data quality. The overall setup allows us to efficiently collect large-scale, reliable data from diverse users.
+          </p>
+          <p>
+            In the experiment, participants are first shown a short video with a target location (labeled as Point A). Participants then use mouse controls to match the direction and speed of a moving noise pattern, 
+            aligning it with the perceived motion in the natural video. 
+            <br>
+            <!-- Placeholder for video demonstration -->
+            <video controls autoplay muted loop>
+              <source src="static/exp_demo.mp4" type="video/mp4">
+              Your browser does not support video tags.
+            </video>
+          </p>
+          <p>
+            Each video and noise pattern is presented multiple times, allowing participants sufficient opportunities to infer the most accurate result based on their perception. 
+            Note the video is slowed down for better readability. Feedback on ground truth and response vectors was provided after each response during practice trials and the
+            training session but was not shown in the main session when collecting benchmark data.
+            The complete experimental workflow is illustrated below.
+          </p>
+          <br>
+          <!-- Placeholder for workflow figure -->
+          <figure>
+            <img src="static/exp_workflow.png" alt="Experimental Workflow Diagram">
+            <figcaption>Figure: Overview of the experimental workflow for collecting human-perceived motion data.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+
+
+<!-- 参考文献 BibTeX 格式 -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+
+  @inproceedings{Yang2025Huperflow,
+  author    = {Yung-hao Yang and Zitang Sun and Taiki Fukiage and Shin’ya Nishida},
+  title     = {Huperflow: A Comprehensive Benchmark for Human vs. Machine Motion Estimation Comparison},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2025},
+  note      = {In press}
+}
+
+    </code></pre>
+  </div>
+</section>
+
+<!-- 页脚部分 -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- 链接到PDF文件 -->
+      <a class="icon-link" href="./static/paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <!-- GitHub图标及链接 -->
+      <a class="icon-link" href="xxx" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <!-- 网站许可证信息 -->
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This page is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
